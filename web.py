@@ -39,12 +39,12 @@ def main():
         feature_value = st.number_input(f"{feature_name} (输入值):")  
         feature_values.append(feature_value)  
   
-    if st.button("进行预测"):  
-        prediction = predict(feature_values)  
-        if prediction == 1:  
-        st.success("预测结果: 不耐受")  
-        elif prediction == 0:  
-        st.success("预测结果: 耐受")   
+    if st.button("进行预测"):    
+        prediction = predict(feature_values)    
+        if prediction == 1:    
+            st.success("预测结果: 不耐受")    
+        elif prediction == 0:    
+            st.success("预测结果: 耐受")   
   
 if __name__ == "__main__":  
     main()
