@@ -31,7 +31,8 @@ def predict(features):
   
 def main():  
     st.title("随机森林预测应用")
-    st.markdown("**“使用呼吸机”、“使用镇静剂”、“使用镇痛剂”为分类变量使用=1 未使用=0，体重单位为KG**")  # 使用Markdown语法添加说明
+    st.markdown("**“使用呼吸机”、“使用镇静剂”、“使用镇痛剂”为分类变量使用=1 未使用=0**")  # 使用Markdown语法添加说明
+    st.markdown("**“喂养途径” 胃管=1 肠管=0，体重单位为KG**")
   
     # 用户输入特征  
     feature_values = []  
