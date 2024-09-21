@@ -16,10 +16,8 @@ import numpy as np
 # app.py  
   
 # 加载模型  
-  
-# 构造模型的完整路径   
-with open('random_forest_model.pkl', 'rb') as f:  
-    model = pickle.load(f)  
+model = joblib.load('random_forest_model.pkl')
+
   
 # 假设特征名称如下，根据实际情况调整  
 feature_names = ['使用呼吸机时间', '体重', 'apache2评分', '喂养途径', '镇静药', '镇痛药', '白蛋白']  
