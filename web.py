@@ -20,7 +20,7 @@ model = joblib.load('random_forest_model.pkl')
 
   
 # 假设特征名称如下，根据实际情况调整  
-feature_names = ['使用呼吸机时间', '体重', 'apache2评分', '喂养途径', '镇静药', '镇痛药', '白蛋白']  
+feature_names = ['使用呼吸机', '体重', 'apache2评分', '喂养途径', '使用镇静剂', '使用镇痛剂', '血清白蛋白']  
   
 def predict(features):  
     # 将特征列表转换为数组  
@@ -30,7 +30,8 @@ def predict(features):
     return prediction  
   
 def main():  
-    st.title("随机森林预测应用")  
+    st.title("随机森林预测应用")
+    st.markdown("**说明11111111**")  # 使用Markdown语法添加说明
   
     # 用户输入特征  
     feature_values = []  
@@ -40,7 +41,10 @@ def main():
   
     if st.button("进行预测"):  
         prediction = predict(feature_values)  
-        st.success(f"预测结果: {prediction}")  
+        if prediction == 1:  
+        st.success("预测结果: 不耐受")  
+        elif prediction == 0:  
+        st.success("预测结果: 耐受")   
   
 if __name__ == "__main__":  
     main()
