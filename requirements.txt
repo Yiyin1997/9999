@@ -2,4 +2,4 @@ streamlit
 pandas
 numpy
 joblib
-Scikit-learn
+Scikit-learn==1.2.2
